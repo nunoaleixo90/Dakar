@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakar Rally</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Passion+One|Lobster|Righteous|Amatic+SC:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="bg-music" id="music-name">
+        <img src="images/music.png"> Billie Eilish - Everything I Wanted 
+    </div>
+    <audio id="bgAudio" autoplay loop>
+        <source src="audio/bg-music1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler" onclick="toggleNavigationDisplay()">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><button class="btn btn1" id="btn1" onclick="closeMode()">Gallery</button></li>
+                        <li><button class="btn btn2">History</button></li>
+                        <li><button class="btn btn3">2020 Route</button></li>
+                        <li><button class="btn btn4" id="mute" onclick="muteOnOff()"><img id="sound-img" src="images/sound.png" alt="Sound Off"></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="video-slider" id="video-slider">
+        <video id="slider" autoplay loop muted>
+            <source src="videos/first.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <img src="images/icon-dakar.png" alt="Logo Dakar">
+        </div>
+        <ul id="navigation" class="navigation">
+            <li onclick="videoUrl('videos/first.mp4')"><img src="images/img1.png"></li>
+            <li onclick="videoUrl('videos/second.mp4')"><img src="images/img2.png"></li>
+            <li onclick="videoUrl('videos/third.mp4')"><img src="images/img3.png"></li>
+            <li onclick="videoUrl('videos/fourth.mp4')"><img src="images/img4.png"></li>
+        </ul>
+        <div class="icon-next-movie">
+            <img src="images/next-movie.png">
+        </div>
+    </section>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <img class="close" src="images/slider-close.png">
+            <div class="slidershow middle">
+                <div class="slides">
+                  <input type="radio" name="r" id="image1" checked>
+                  <input type="radio" name="r" id="image2">
+                  <input type="radio" name="r" id="image3">
+                  <input type="radio" name="r" id="image4">
+                  <input type="radio" name="r" id="image5">
+                  <div class="slide s1">
+                    <img src="images/gallery1.jpeg">
+                    </div>
+                  <div class="slide">
+                    <img src="images/gallery2.jpeg">
+                  </div>
+                  <div class="slide">
+                    <img src="images/gallery3.jpeg">
+                  </div>
+                  <div class="slide">
+                    <img src="images/gallery4.jpeg">
+                  </div>
+                  <div class="slide">
+                    <img src="images/gallery5.jpeg">
+                  </div>
+                </div>
+          
+                <div class="button-slider">
+                  <label for="image1" class="bar"></label>
+                  <label for="image2" class="bar"></label>
+                  <label for="image3" class="bar"></label>
+                  <label for="image4" class="bar"></label>
+                  <label for="image5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="history" id="history">
+        <div class="popup-history">
+            <img class="close close-history" src="images/close.png">
+            <div class="symbols-dakar">
+                <img src="images/symbol-dakar.png">
+                <img src="images/symbol-dakar1979.png">
+                <img src="images/symbol-ktm.png">
+                <img src="images/symbol-dakar2016.png">
+                <img src="images/symbol-honda.png">
+                <img src="images/symbol-dakar2017.png">                
+            </div>
+            <h1>History</h1>
+            <p>The race originated in December 1977, a year after Thierry Sabine got lost in the Ténéré desert whilst competing 
+            in the Abidjan-Nice rally and decided that the desert would be a good location for a regular rally.[4] 182 vehicles 
+            took the start of the inaugural rally in Paris, with 74 surviving the 10,000-kilometre (6,200 mi) trip to the Senegalese 
+            capital of Dakar. Cyril Neveu holds the distinction of being the event's first winner, riding a Yamaha motorcycle.
+            <p>The event rapidly grew in popularity, with 216 vehicles taking the start in 1980 and 291 in 1981.[5] Neveu won the event 
+            for a second time in 1980, Hubert Auriol taking honours in 1981 for BMW. By this stage, the rally had already begun to 
+            attract the participation of famous names from elsewhere in motorsport, such as Henri Pescarolo and Jacky Ickx.</p>
+            <p>Now boasting 382 competitors, more than double the amount that took the start in 1979, Neveu won the event for a third 
+            time in 1982, this time riding a Honda motorcycle, while victory in the car class went to the Marreau brothers, driving a 
+            privately entered Renault 20, whose buccaneering exploits seemed to perfectly capture the spirit of the early years of the 
+            rally. Auriol captured his second bikes class victory in 1983, the first year that Japanese manufacturer Mitsubishi competed 
+            in the rally, beginning an association that would last all the way until 2009.</p>
+            <p>At the behest of 1983 car class winner Jacky Ickx, Porsche entered the Dakar in 1984, with the total number of 
+            entries now at 427.[5] The German marque won the event at their first attempt courtesy of René Metge, who had previously 
+            won in the car category in 1981, whilst Ickx finished sixth. Gaston Rahier meanwhile continued BMW's success in the 
+            motorcycle category with back-to-back wins in 1984 and 1985, the year of Mitsubishi's first victory of 12 in the car 
+            category, Patrick Zaniroli taking the spoils. The 1986 event, won by Metge and Neveu, was marred by the death of event 
+            founder Sabine in a helicopter crash, his father Gilbert taking over organisation of the rally.</p>
+            <div class="waves-efect"></div>
+            
+        </div>
+    </div>
+    <section class="container">
+        <div class="info">
+            <div class="three-section sec1">
+                <h2>Partners of the Dakar</h2>
+            </div>
+            <div class="three-section sec2">
+                <div class="partners">
+                    <img src="images/partener1.png" alt="Parteners">
+                    <img src="images/partener2.png" alt="Parteners">
+                    <img src="images/partener3.png" alt="Parteners">
+                    <img src="images/partener4.png" alt="Parteners">
+                    <img src="images/partener5.png" alt="Parteners">
+                    <img src="images/partener6.png" alt="Parteners">
+                </div>
+            </div>
+            <div class="three-section sec3">
+                <div class="partners">
+                    <img src="images/partener7.png" alt="Parteners">
+                    <img src="images/partener8.png" alt="Parteners">
+                    <img src="images/partener9.png" alt="Parteners">
+                    <img src="images/partener10.png" alt="Parteners">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-section foot1">
+                    <h1> Get in touch</h1>
+                </div>
+                <div class="footer-section foot2">
+                    <div class="contacts">
+                        <p><img src="images/icon-phone.png">(+351) 123 456 789</p>
+                        <p><img src="images/icon-email.png">info@example.com</p>
+                        <p><img src="images/icon-local.png">Street Example 0000-000 Localization</p>
+                        <p class="postal-code">Country</p>
+                    </div>
+                </div>
+                <div class="footer-section foot3">
+                    <div class="social-networks">
+                        <div class="social-logo link1">
+                            <a><img src="images/facebook-logo.png" alt="Facebook Logo"></a>
+                        </div>
+                        <div class="social-logo link2">
+                            <a><img src="images/youtube-logo.png" alt="Youtube Logo"></a>
+                        </div>
+                        <div class="social-logo link3">
+                            <a><img src="images/instagram-logo.png" alt="Instagram Logo"></a>
+                        </div>
+                        <div class="social-logo link4">
+                            <a><img src="images/twitter-logo.png" alt="Twitter Logo"></a>
+                        </div>
+                        <div class="social-logo link5">
+                            <a><img src="images/whatsapp-logo.png" alt="Whatsapp Logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="showMap">
+            <div id="map" class="popup-content">
+                <img src="images/map.png" alt="Map">
+                <p><b<>(Tap out of image to close)</b></p>
+            </div>
+        </div>
+    </section>
+    <script src="script/script.js" type="text/javascript"></script>
+</body>
+</html>
